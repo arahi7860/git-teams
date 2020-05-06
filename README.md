@@ -142,21 +142,13 @@ Here are most of the commands you're going to use today and during your project.
 | `git push --set-upstream <remoteName> <branchName>` | Upload changes from to the remote (`-u` is shorthand for the option)   |
 | `git push`                                          | When upstream is set, can use command without options                  |
 
-### You do: Merging and Merge Conflicts (20 min / 0:40)
-
-With a pair, follow along to this exercise on
-[Exercise: creating and resolving merge conflicts](https://git.generalassemb.ly/seir-1118/merge-conflicts).
-
-
-## Break (10 min / 0:50)
-
-## Git Workflows (5 min / 0:55)
+## Git Workflows (5 min / 0:25)
 
 Git is an extremely flexible tool and you can use it in many different ways.
 You'll already be familiar with some of the following workflows, though maybe
 not by name. You'll also find many variations on the below workflows.
 
-### Centralized Workflow (5 min / 1:00)
+### Centralized Workflow (5 min / 0:30)
 
 The Centralized workflow is good for people just starting out with git: there is
 low overhead and it's easy to get started. The remote repo has only a single
@@ -237,16 +229,13 @@ $ git push
 After pushing the changes to the remote, Archie should communicate with the team
 that the remote has been updated.
 
-It is a good idea to fetch and pull changes as early and often as possible. Even
-if Betty is still working on her own features, she can fetch and even merge the
+It is a good idea to pull changes as early and often as possible. Even
+if Betty is still working on her own features, she can pull and merge the
 latest commits from the remote to her local repo.
 
 **_Betty:_**
 
 ```bash
-# Fetch any changes from the remote, using `--all` doesn't even need to change branches
-betty in local-project-three on  bettys-feature-branch
-$ git fetch --all
 
 # To pull the changes, should checkout `master` otherwise will pull into the active branch
 betty in local-project-three on  bettys-feature-branch
