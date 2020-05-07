@@ -35,7 +35,7 @@ to a project; instead, every developer who clones the repository has their own
 much easier to use when working in groups, since each member can have an
 up-to-date and complete repository.
 
-### Review Git Branching
+### Git Branching
 
 You can think of branches as similar to forks that are contained within the
 repository. They're useful for developers and teams of developers to maintain
@@ -66,7 +66,7 @@ Diagram](https://wac-cdn.atlassian.com/dam/jcr:389059a7-214c-46a3-bc52-7781b4730
 
 ### Merging and Merge Conflicts
 
-As we've learned, we can create branches to create new versions of our project
+We can create branches to create new versions of our project
 from within a repository. We can do this to build out a new feature in isolation
 and then merge those features into the rest of our codebase when we're ready.
 
@@ -120,7 +120,7 @@ Here are most of the commands you're going to use today and during your project.
 | `git checkout <branchName>`    | Switch to a branch that already exists                                                       |
 | `git checkout -b <branchName>` | Create a new branch and switch to it                                                         |
 | `git branch -D <branchName>`   | Hard delete a branch (works if commits haven't be pushed to remote, `-d` is the soft delete) |
-| `git merge <branchName>`       | Merges the specified branch (`<branchName>`) into the current branch                         |
+| `git merge <branchName>`       | Merges the specified branch (`<branchName>`) into the current branch locally                         |
 
 #### Remotes
 
@@ -142,13 +142,13 @@ Here are most of the commands you're going to use today and during your project.
 | `git push --set-upstream <remoteName> <branchName>` | Upload changes from to the remote (`-u` is shorthand for the option)   |
 | `git push`                                          | When upstream is set, can use command without options                  |
 
-## Git Workflows (5 min / 0:25)
+## Git Workflows (5 min / 0:55)
 
 Git is an extremely flexible tool and you can use it in many different ways.
 You'll already be familiar with some of the following workflows, though maybe
 not by name. You'll also find many variations on the below workflows.
 
-### Centralized Workflow (5 min / 0:30)
+### Centralized Workflow (5 min / 1:00)
 
 The Centralized workflow is good for people just starting out with git: there is
 low overhead and it's easy to get started. The remote repo has only a single
@@ -229,13 +229,16 @@ $ git push
 After pushing the changes to the remote, Archie should communicate with the team
 that the remote has been updated.
 
-It is a good idea to pull changes as early and often as possible. Even
-if Betty is still working on her own features, she can pull and merge the
+It is a good idea to fetch and pull changes as early and often as possible. Even
+if Betty is still working on her own features, she can fetch and even merge the
 latest commits from the remote to her local repo.
 
 **_Betty:_**
 
 ```bash
+# Fetch any changes from the remote, using `--all` doesn't even need to change branches
+betty in local-project-three on  bettys-feature-branch
+$ git fetch --all
 
 # To pull the changes, should checkout `master` otherwise will pull into the active branch
 betty in local-project-three on  bettys-feature-branch
